@@ -1,7 +1,32 @@
 # include "first.h"
+int main ()
+{	
+
+	messages head ;
+	int choice = TRUE  ;
+	head = ( messages) malloc(sizeof(message));
+	head -> next = NULL ;
+	system("clear");
+	while(choice)
+	{
+		cover();
+		fscanf(stdin,"%d" , & choice);
+		switch (choice){
+			case 1:input(head);break;
+			case 2:output(head); break;
+			case 3:delete(head);break;
+			case 4:inquiry(head);break;
+			case 5:count(head);break;
+			case 6:read(head);break;
+			case 7:save(head);break;
+			default:break;
+		}
+	}
+}
 
 
-void  input(messages head  )
+
+/*void  input(messages head  )
 {
 	messages p , q ;
 	int number , i  ;
@@ -407,4 +432,4 @@ void save(messages head)
 	system("clear");
 	fclose(fp);
 }
-
+*/
