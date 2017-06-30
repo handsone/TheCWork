@@ -20,7 +20,7 @@ typedef struct worksmessage {
 
 void reback();
 void save(messages head);
-void error(char *msg);
+void error(const char *msg);
 void float_sort(float * a ,float * b );
 void count (messages head);
 void output(message * head );

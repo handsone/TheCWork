@@ -85,7 +85,6 @@ void cover ()
 
 void output(message * head )
 {
-	char ch ; 
 	messages p = head -> next ;
 	system("clear");
 	puts(" —————————————————————————————————————————————————————————————————————————————————————————————————— ");
@@ -319,7 +318,7 @@ void inquirybypay(messages head)
 
 void count (messages head )
 {
-	char ch , name[10] ;
+	char  name[10] ;
 	int startmonth , endmonth , i = 0 ;
 	float sum  = 0 ; 
 	system("clear");
@@ -353,7 +352,7 @@ void count (messages head )
 }
 
 
-void error(char *msg)
+void error(const char *msg)
 {
 	fprintf(stderr , "%s: %s\n" , msg , strerror(errno));
 	exit(1);
@@ -395,7 +394,7 @@ void save(messages head)
 {
 	FILE * fp ; 
 	messages p = head -> next ; 
-	if ((fp = fopen("test" , "wb" ))== NULL )
+	if ((fp = fopen("test" , "ab" ))== NULL )
 		error("can^t open the file " )  ;
 	while (   p != NULL )
 	{
